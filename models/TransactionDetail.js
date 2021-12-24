@@ -1,16 +1,12 @@
-import mongoose, { SchemaTypes } from "mongoose";
+import mongoose from "mongoose";
 
 const TransactionDetail = mongoose.Schema({
-  booking_date: {
-    type: Date,
-    required: true,
-  },
   start: {
     type: Date,
     required: true,
   },
-  end: {
-    type: Date,
+  duration: {
+    type: Number,
     required: true,
   },
   subtotal_price: {
@@ -18,7 +14,7 @@ const TransactionDetail = mongoose.Schema({
     required: true,
   },
   field: {
-    type: SchemaTypes.ObjectId,
+    type: mongoose.SchemaTypes.ObjectId,
     ref: "field",
   },
 });

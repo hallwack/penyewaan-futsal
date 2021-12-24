@@ -1,4 +1,3 @@
-import express from "express";
 import Field from "../models/Field.js";
 
 const getField = async (req, res) => {
